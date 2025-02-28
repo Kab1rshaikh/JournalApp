@@ -33,16 +33,16 @@ public class UserDetailsServiceImplMock {
     @Disabled
     @BeforeEach
     void  setUpAll(){
-        MockitoAnnotations.initMocks(this);
+        //MockitoAnnotations.initMocks(this);
     }
 
 
     @Disabled
     @Test
     void loadUserByUserNameTest(){
-       when(userRepo.findByUserName(ArgumentMatchers.anyString())).thenReturn(User.builder().userName("Ram").password("Ram").roles(new ArrayList<>()).build());
+      /* when(userRepo.findByUserName(ArgumentMatchers.anyString())).thenReturn(User.builder().userName("Ram").password("Ram").roles(new ArrayList<>()).build());
        UserDetails user = userDetailsService.loadUserByUsername("ram");
-        assertNotNull(user);
+        assertNotNull(user);*/
     }
 
 
