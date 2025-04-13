@@ -3,30 +3,18 @@ package net.engineeringdigest.journalApp.entity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
-import net.engineeringdigest.journalApp.enums.Sentiment;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
 
-@Document(collection = "journal_entries")
-
+@Document(collection = "config_journal_app")
 @Data
 @NoArgsConstructor
-public class JournalEntry {
+public class ConfigJournalAppEntity {
 
-    @Id
-    private ObjectId id;
-
-    @NonNull
-     private String title;
-
-     private String content;
-
-    private LocalDateTime date;
-
-    private Sentiment sentiment;
-
+    private String key;
+    private String value;
 
 }
